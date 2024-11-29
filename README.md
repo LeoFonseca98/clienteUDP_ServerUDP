@@ -32,9 +32,9 @@ try:
 finally:
     print('Cliente: Fechando a conexão')
     s.close()
-Servidor (servidorUDP.py)
-python
-Copiar código
+
+**Servidor (servidorUDP.py)**
+
 import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -53,24 +53,18 @@ while 1:
     if dados:
         print('Servidor enviando mensagem...')
         s.sendto(dados + (mensagem.encode()), end)
+
 Como Rodar
 Execute o servidor:
+    python servidorUDP.py
 
-bash
-Copiar código
-python servidorUDP.py
 Execute o cliente:
+    python clienteUDP.py
 
-bash
-Copiar código
-python clienteUDP.py
 O cliente envia uma mensagem ao servidor, que responde de volta, e a conexão é encerrada.
 
 Conclusão
 Este código ilustra uma comunicação simples usando UDP, onde o cliente envia uma mensagem e o servidor responde. É uma demonstração de como funciona a troca de dados em redes, abordando conceitos básicos de Sockets e Segurança da Informação.
-
-arduino
-Copiar código
 
 Esse **README** é direto ao ponto, explicando rapidamente o funcionamento do projeto e o código, com instruções claras para executar tanto o servidor quanto o cliente.
 
